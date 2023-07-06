@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap");
+
+/* -------------------- Nav ---------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+.bg-light-gray {
+  background-color: #ededf3e7;
+  /* background-color: #5e5e685d; */
+}
+.up {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: 200;
+  background-color: white;
+  /* font-size: 10px; */
+}
+.nav-right input[type="checkbox"],
+.nav-right .hamburger-lines {
+  display: none;
+}
+.nav-bar {
+  display: flex;
+  background: #a1ffce; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #faffd1,
+    #a1ffce
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #faffd1,
+    #a1ffce
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  justify-content: space-between;
+}
+
+.logo {
+  /* margin: 0; */
+  margin: 0.5rem;
+}
+
+.nav-bar .nav-right {
+  width: 60%;
+}
+
+.nav-right .nav-items {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-evenly;
+  height: 50%;
+  align-items: center;
+  margin-top: 10px;
+}
+.nav-right .nav-items .item {
+  list-style-type: none;
+}
+
+.nav-right .nav-items .item a {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: inherit;
+}
+
+.nav-right .nav-items .item a:hover {
+  color: #c41515dc;
+}
+
+.frame-container {
+  width: 100%;
+  height: 82vh;
+  /* border: 4px solid red; */
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.frame {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* margin: 50%; */
+
+  width: 400px;
+  height: 400px;
+  /* margin-top: -200px;
+  margin-left: -200px; */
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  /* overflow: hidden; */
+  background: #28404e;
+  background: -moz-linear-gradient(top, #28404e 0%, #1c2e38 100%);
+  background: -webkit-linear-gradient(top, #28404e 0%, #1c2e38 100%);
+  background: linear-gradient(to bottom, #28404e 0%, #1c2e38 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28404e', endColorstr='#1c2e38',GradientType=0 ); */
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headline {
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 22px;
+}
+
+.headline .small {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.circle-big {
+  position: relative;
+  width: 114px;
+  height: 114px;
+  margin: 30px auto 25px auto;
+}
+
+.circle-big svg {
+  width: 114px;
+  height: 114px;
+}
+
+.circle-big .bg {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #1b2a33;
+}
+
+.circle-big .progress {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #27e1ae;
+  stroke-linecap: round;
+  stroke-dasharray: calc(52 * 2 * 3.14);
+  stroke-dashoffset: 60;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  animation: big 1.5s ease-out;
+}
+
+.circle-big .text {
+  position: absolute;
+  width: 100%;
+  top: 37px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.circle-big .text .small {
+  font-size: 14px;
+  color: #648192;
+}
+
+.circles-small {
+  margin: 0 auto;
+  width: 400px;
+  height: 80px;
+  text-align: center;
+}
+
+.circle-small {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+}
+
+.circle-small svg {
+  width: 80px;
+  height: 80px;
+}
+
+.circle-small .bg {
+  fill: none;
+  stroke-width: 6px;
+  stroke: #1b2a33;
+}
+
+.circle-small .progress {
+  fill: none;
+  stroke-width: 6px;
+  stroke: #5ce1ec;
+  stroke-linecap: round;
+  stroke-dasharray: calc(37 * 2 * 3.14);
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.circle-small .progress.one {
+  stroke-dashoffset: 80;
+  animation: one 1s ease-out;
+}
+
+@keyframes one {
+  from {
+    stroke-dashoffset: calc(37 * 2 * 3.14);
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+.circle-small .progress.two {
+  stroke-dashoffset: 140;
+  animation: two 1s ease-out;
+}
+
+.circle-small .text {
+  position: absolute;
+  width: 100%;
+  top: 26px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.circle-small .text .small {
+  font-size: 12px;
+  color: #648192;
+}
+
+@keyframes big {
+  from {
+    stroke-dashoffset: calc(52 * 2 * 3.14);
+  }
+  to {
+    stroke-dashoffset: 60;
+  }
+}
+
+@keyframes two {
+  from {
+    stroke-dashoffset: calc(37 * 2 * 3.14);
+  }
+  to {
+    stroke-dashoffset: 140;
+  }
+}
+
+section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+select,
+input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+#distance-field,
+#sets-field {
+  display: none;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.progress-container {
+  margin-top: 10px;
+}
+.progress-bar {
+  margin-bottom: 20px;
+}
+
+.progress-bar__label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.progress-bar-progress {
+  height: 20px;
+  width: 300px;
+  /* color: red; */
+  background-color: red;
+  border-radius: 10px;
+}
+
+/* Add a class for different progress bar colors */
+.progress-bar__progress--running {
+  background-color: #8bc34a;
+}
+
+.progress-bar__progress--swimming {
+  background-color: #03a9f4;
+}
+
+.progress-bar__progress--cycling {
+  background-color: #ff9800;
+}
+
+.transition-effect {
+  background-color: red;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+}
+
+progress {
+  accent-color: coral;
+}
+
+.progress-bar-hover {
+  background-color: orange;
+}
+
+.activity-entry {
+  margin-bottom: 10px;
+}
+
+.activity-entry span {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.delete-button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #5c0505;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-left: 15px;
+}
+
+.edit-button {
+  background-color: #135895;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-right: 5px;
+}

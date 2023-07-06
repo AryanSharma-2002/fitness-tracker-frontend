@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap");
+
+/* -------------------- Nav ---------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+.bg-light-gray {
+  background-color: #ededf3e7;
+  /* background-color: #5e5e685d; */
+}
+.up {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: 200;
+  background-color: white;
+  /* font-size: 10px; */
+}
+.nav-right input[type="checkbox"],
+.nav-right .hamburger-lines {
+  display: none;
+}
+.nav-bar {
+  display: flex;
+  background: #a1ffce; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #faffd1,
+    #a1ffce
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #faffd1,
+    #a1ffce
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  justify-content: space-between;
+}
+
+.logo {
+  /* margin: 0; */
+  margin: 0.5rem;
+}
+
+.nav-bar .nav-right {
+  width: 60%;
+}
+
+.nav-right .nav-items {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-evenly;
+  height: 50%;
+  align-items: center;
+  margin-top: 10px;
+}
+.nav-right .nav-items .item {
+  list-style-type: none;
+}
+
+.nav-right .nav-items .item a {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: inherit;
+}
+
+.nav-right .nav-items .item a:hover {
+  color: #c41515dc;
+}
+
+.workout-plan {
+  margin-top: 40px;
+  background-color: rgb(207, 255, 207);
+  color: #333333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /* overflow: hidden; */
+  /* height: 400px; */
+}
+
+.workout-plan__image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+h2 {
+  color: #26a69a;
+}
+h3 {
+  color: #ff7043;
+}
+
+.workout-plan__content {
+  text-align: center;
+}
+
+.workout-plan__content p {
+  margin-bottom: 10px;
+}
+
+.workout-plan__content h3 {
+  margin-bottom: 5px;
+}
+
+.workout-plan__content ol {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+/* Animation: Card on hover */
+.workout-plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation: Image zoom on hover */
+.workout-plan__image img:hover {
+  transform: scale(1.1);
+}
+.workout-plan__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.workout-plan__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.workout-plan__image:hover img {
+  transform: scale(1.1);
+}
+.workout-plan__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  /* overflow: hidden; */
+  border-radius: 5px;
+}
+
+.workout-plan__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.workout-plan__image:hover img {
+  transform: scale(1.1);
+}
+
+.slider {
+  position: relative;
+  height: 400px;
+}
+
+.slider img {
+  display: none;
+  object-fit: contain;
+  max-width: 100%;
+  /* height: 250px; */
+}
+
+.slider .img-active {
+  display: block;
+}
+
+.slider-nav__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.slider-nav__arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-nav__prev {
+  left: 50px;
+}
+
+.slider-nav__next {
+  right: 50px;
+}
